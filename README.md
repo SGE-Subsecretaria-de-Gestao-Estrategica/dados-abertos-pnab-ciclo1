@@ -24,15 +24,14 @@ Os arquivos de dados e documentação estão organizados na pasta `dados/` e pod
 
 A base de dados foi desenvolvida a partir de dados secundários das transações financeiras realizadas pelos entes que aderiram à PNAB. A pesquisa utilizou uma abordagem de *Data Warehouse* baseada em modelagem dimensional (esquema Estrela/*Star Schema*), onde as transações financeiras formam a tabela fato e os dados cadastrais/territoriais compõem as dimensões.
 
-### 1. Extração, Validação e Tratamento
+### 1. Extração e Tratamento
 * **Fonte Principal:** Banco de dados do programa "BB Gestão Ágil", via API, fruto de Acordo de Cooperação Técnica entre o Banco do Brasil e o Ministério da Cultura (MinC).
 * **Período de Coleta:** Movimentações realizadas até 31 de dezembro de 2025 (data-limite do Ciclo I). A extração final foi concluída em 24 de abril de 2026.
 * **Critérios de exclusão:**  Considerou-se apenas registros com destinatário identificável (CPF ou CNPJ válido na Receita Federal) e de natureza de crédito. Estornos e duplicidades foram eliminados; Foram mantidas apenas transações de valor igual ou superior a R$ 375,00 (excluindo resíduos financeiros que não representavam execução finalística — menos de 1% da base) e beneficiários com idade igual ou superior a 16 anos.
 * **Definição de "Contemplado":** O documento (CPF/CNPJ) que recebeu recursos de um determinado ente. Como um agente pode receber recursos de mais de um ente, ele pode aparecer replicado para entes diferentes (os dados estão agregados por documento e por ente). 
-* **Validação:** Os valores das movimentações foram cruzados com os saldos em conta correntes fornecidos pelo Banco do Brasil. A divergência mediana encontrada foi inferior a 1%, garantindo alta confiabilidade à base.
 
 ### 2. Enriquecimento dos Dados
-A base de transações foi enriquecida via plataforma *Conecta Gov* com cruzamentos de dados administrativos do Governo Federal (extraídos em sua maioria em maio de 2026):
+A base de transações foi enriquecida via plataforma *Conecta Gov* e dados obtidos via Acordo de Cooperação Técnica (ACT), com cruzamentos de dados administrativos do Governo Federal:
 * **Receita Federal do Brasil:** Dados cadastrais de CPF e CNPJ.
 * **Cadastro Único (CadÚnico / MDS):** Indicadores familiares e socioeconômicos.
 * **RAIS (MTE):** Informações sobre vínculos formais de trabalho, ocupação e escolaridade (recorte temporal de 2022 a 2024).

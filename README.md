@@ -12,8 +12,8 @@ O objetivo deste projeto é fornecer transparência e subsidiar análises, repor
 
 Os arquivos de dados e documentação estão organizados na pasta `dados/` e podem ser acessados diretamente pelos caminhos abaixo:
 
-* **[`dados/pnab_agentes_contemplados_ciclo1.csv`](dados/pnab_agentes_contemplados_ciclo1.csv)**: Tabela contendo a listagem de 167.817 agentes culturais contemplados em 5.125 entes federativos (26 estados, Distrito Federal e 5.098 municípios).
-* **[`dados/dicionario_dados_pnab_ciclo1.pdf`](dados/dicionario_dados_pnab_ciclo1.pdf)**: Dicionário de dados detalhado, descrevendo cada variável contida no arquivo CSV, seus tipos e origens.
+* **[`dados/agentes-contemplados-ciclo1`](dados/agentes-contemplados-ciclo1)**: Tabela contendo a listagem de 167.817 agentes culturais contemplados em 5.125 entes federativos (26 estados, Distrito Federal e 5.098 municípios), em diferentes formatos.
+* **[`dados/dicionario_dados`](dados/dicionario-dados)**: Dicionário de dados detalhado, descrevendo cada variável contida na base de dados disponibilizada.
 
 > 🔒 **Nota:** Em conformidade com a Lei Geral de Proteção de Dados (LGPD), todos os dados relativos a pessoas físicas beneficiárias foram **anonimizados**.
 
